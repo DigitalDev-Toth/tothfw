@@ -79,10 +79,13 @@ class Home extends Component {
         return (
             <div className='loading text-center'>
                 <div className='cell'>
+                    <h1>Welcome to Toth Framework</h1>
+                </div>
+                <div className='cell'>
                     <CircularProgress size={2} />
                 </div>
                 <div className='cell'>
-                    <h1>Welcome to Toth Framework</h1>
+                    <h2>Start to develop</h2>
                 </div>
             </div>
         );
