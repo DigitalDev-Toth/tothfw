@@ -28,6 +28,7 @@ if (__PRODUCTION__ || __DEVFULLSTACK__) {
         <div>
             <Provider store={store}>
                 <Router history={history}>
+                    <Redirect from='/welcome' to='/' />
                     <Route path='/' component={App}>
                         <IndexRoute component={Welcome} onEnter={authorization} />
                         <Route path='looker/:token' component={Looker} onEnter={authorization} />
