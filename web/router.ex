@@ -18,7 +18,8 @@ defmodule TothApp.Router do
     scope "/", TothApp do
         pipe_through :browser
 
-        get     "/", AppController, :index
+        get     "/", AppController, :welcome
+        get     "/welcome", AppController, :welcome
     end
 
     scope "/api", TothApp do

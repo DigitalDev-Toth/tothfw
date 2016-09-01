@@ -1,4 +1,4 @@
-import API from '../api';
+/*import API from '../api';*/
 import { getModulePathName } from './ToolsHelper';
 
 const _TOKEN_ = 'token';

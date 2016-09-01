@@ -6,7 +6,7 @@ import { syncHistoryWithStore } from 'react-router-redux';
 import { Provider } from 'react-redux';
 import MakeStore from './store/MakeStore';
 import App from './containers/App';
-import Home from './containers/Home';
+import Welcome from './containers/Welcome';
 import Looker from './containers/Looker';
 import DevTools from './containers/DevTools';
 import NotFound from './components/error/NotFound';
@@ -29,7 +29,7 @@ if (__PRODUCTION__ || __DEVFULLSTACK__) {
             <Provider store={store}>
                 <Router history={history}>
                     <Route path='/' component={App}>
-                        <IndexRoute component={Home} onEnter={authorization} />
+                        <IndexRoute component={Welcome} onEnter={authorization} />
                         <Route path='looker/:token' component={Looker} onEnter={authorization} />
                         <Route path='error' component={Forbidden} />
                         <Route path='*' component={NotFound} />
@@ -53,9 +53,9 @@ if (__PRODUCTION__ || __DEVFULLSTACK__) {
         <div>
             <Provider store={store}>
                 <Router history={history}>
-                    <Redirect from='/index' to='/' />
+                    <Redirect from='/welcome' to='/' />
                     <Route path='/' component={App}>
-                        <IndexRoute component={Home} />
+                        <IndexRoute component={Welcome} />
                         <Route path='looker' component={Looker} />
                         <Route path='*' component={NotFound} />
                     </Route>

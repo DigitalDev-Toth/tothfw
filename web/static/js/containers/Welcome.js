@@ -14,9 +14,9 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 /*const __DEVFULLSTACK__ = process.env.__DEVFULLSTACK__;*/
 
 /**
- * Home container
+ * Welcome container
  */
-class Home extends Component {
+class Welcome extends Component {
     /**
      * Basic React component constructor
      *
@@ -32,32 +32,26 @@ class Home extends Component {
      */
     componentDidMount() {
         /*const actions = this.props.actions;
-
         if (__PRODUCTION__ || __DEVFULLSTACK__) {
             const pathname = this.props.location.pathname;
             const userId = getUserId();
             const { instance, result } = checkInstance(pathname, this.props.instance);
-
             if (result) {
                 actions.updateInstance(instance);
             }
-
             API.Auth.welcome();
             API.Remote.setRemoteUser();
-
             instance.on(`welcome__${userId}`, payload => {
                 if (userId === payload.id) {
                     actions.notification(payload.message);
                 }
             });
-
             instance.on('entered', payload => {
                 if (userId !== payload.id) {
                     actions.notification(payload.message);
                 }
             });
         }
-
         API.Docs.getDefaultDocuments(actions.loadDefaultData);*/
     }
 
@@ -95,14 +89,14 @@ class Home extends Component {
 /**
  * React properties types definitions
  */
-Home.propTypes = {
+Welcome.propTypes = {
     instance: PropTypes.object.isRequired
 };
 
 /**
  * Material UI context types definitions
  */
-Home.childContextTypes = {
+Welcome.childContextTypes = {
     muiTheme: PropTypes.object.isRequired
 };
 
@@ -137,4 +131,4 @@ const mapDispatchToProps = (dispatch) => {
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(Home);
+)(Welcome);
