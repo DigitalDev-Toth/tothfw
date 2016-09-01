@@ -7,7 +7,7 @@ INSTALL
 - Get it:
 ```
 $ git clone git@github.com:DigitalDev-Toth/tothfw.git
-$ cd schedule
+$ cd tothfw
 ```
 - Dependencies:
 ```
